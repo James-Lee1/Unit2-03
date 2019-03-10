@@ -15,6 +15,7 @@ class Stack
     private final ArrayList<Integer> myStack = new ArrayList<Integer>();
     private static String update = "";
 
+    // Pushes a string that if it is not a number, returns an error
     public void push(String number)
     {
         if (isNumeric(number) == false)
@@ -31,6 +32,8 @@ class Stack
     {
         //removes top value from stack
         int top = myStack.size()-1;
+
+        // In the case the stack is empty
         if (top < 0)
         {
             update = "No value!" + "\n";
@@ -43,6 +46,7 @@ class Stack
         }
     }
 
+    // Converts stack into string
     public String toString()
     {
         String output = "";
