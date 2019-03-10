@@ -37,7 +37,7 @@ class StackForm
                 pushValue = userInput.nextLine();
                 stack.push(pushValue);
             }
-            // Prints out the entire stack
+            // Prints out entire stack
             System.out.println("The values in the stack are : " + "\n" + stack.toString());
         }
     }
