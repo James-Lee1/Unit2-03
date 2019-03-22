@@ -13,37 +13,25 @@ import java.util.ArrayList;
 class Stack
 {
     private final ArrayList<Integer> myStack = new ArrayList<Integer>();
-    private static String update = "";
 
     // Pushes a string that if it is not a number, returns an error
-    public void push(String number)
+    public void push(int number)
     {
-        if (isNumeric(number) == false)
-        {
-            System.out.print("Not a valid input" + "\n");
-        }
-        else
-        {
-            myStack.add(Integer.parseInt(number));
-        }
+        myStack.add(number);
     }
 
-    public String pop()
+   // Removes top value of stack
+    public int pop()
     {
-        //removes top value from stack
-        int top = myStack.size()-1;
+        int update = myStack.remove(myStack.size()-1);
+        return update;
+    }
 
-        // In the case the stack is empty
-        if (top < 0)
-        {
-            update = "No value!" + "\n";
-            return update;
-        }
-        else
-        {
-            update = myStack.remove(top) + " was removed." + "\n";
-            return update;
-        }
+    // Returns size of stack
+    public int size()
+    {
+        int size = myStack.size();
+        return size;
     }
 
     // Converts stack into string
@@ -58,26 +46,4 @@ class Stack
 
         return output.toString();
     }
-
-    public static boolean isNumeric(String str)
-    {   // Checks if string is a valid number
-        try
-        {
-            int i = Integer.parseInt(str);
-            if (i >= 0)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
-
-        catch(NumberFormatException nfe)
-        {
-            return false;
-        }
-    }
-
 }
