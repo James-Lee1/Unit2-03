@@ -3,7 +3,7 @@
  * Created by: James Lee
  * Created on: Mar 2019
  * Created for: ICS4U
- * This program uses the class Stack, and can either push or pop values
+ * This program uses the class Stack, and can push or pop without errors
  *
  ****************************************************************************/
 
