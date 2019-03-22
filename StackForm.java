@@ -9,7 +9,7 @@
 
 import java.util.Scanner;
 
-class StackForm
+public class StackForm
 {
     public static void main(String[] args)
     {
